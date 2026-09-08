@@ -12,6 +12,9 @@ class Settings(BaseSettings):
     app_name: str = "BioDocs Backend"
     api_v1_prefix: str = "/api/v1"
     database_url: str | None = None
+    jwt_secret_key: str | None = None
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60
 
 
 settings = Settings()
